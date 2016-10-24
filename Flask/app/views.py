@@ -74,7 +74,7 @@ def getCounts():
             'id': 'ASHP',
             'pageCounts': {
                 'ColorPageCount': CSHPCountC,
-                'BlackWhitePageCount': 'NONE'
+                'BlackWhitePageCount': 'None'
             }
         }
     ]
@@ -91,6 +91,7 @@ def index():
 
     return render_template('index.html',
             form=form,
-            title='Hose Master - Canon Page Counts',
+            title='Hose Master',
+            subtitle='Canon Page Counts',
             counts = counts
             )

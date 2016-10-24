@@ -1,3 +1,6 @@
 prettytable==0.7.2
 pysnmp==4.3.2
 mailer==0.8.1
+Flask==0.11.1
+requests==2.10.0
+WTForms==2.1
