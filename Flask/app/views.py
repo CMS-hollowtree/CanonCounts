@@ -34,14 +34,14 @@ def snmp(community, host, mib):
             for name, val in varBinds:
                 return((val))
 def getCounts():   
-    CRCountC = snmp('public', 'CanonReception', pageCountMIBColor)
-    CFOCountC = snmp('public', 'CanonFrontOffice', pageCountMIBColor)
-    CEJCountC = snmp('public', 'CanonEJ', pageCountMIBColor)
+    CRCountC = snmp('public', 'CanonReception.homant.ds', pageCountMIBColor)
+    CFOCountC = snmp('public', 'CanonFrontOffice.homant.ds', pageCountMIBColor)
+    CEJCountC = snmp('public', 'CanonEJ.homant.ds', pageCountMIBColor)
     CSHPCountC = snmp('public', '192.168.4.163', pageCountMIBColor)
 
-    CRCountB = snmp('public', 'CanonReception', pageCountMIBBlack)
-    CFOCountB = snmp('public', 'CanonFrontOffice', pageCountMIBBlack)
-    CEJCountB = snmp('public', 'CanonEJ', pageCountMIBBlack)
+    CRCountB = snmp('public', 'CanonReception.homant.ds', pageCountMIBBlack)
+    CFOCountB = snmp('public', 'CanonFrontOffice.homant.ds', pageCountMIBBlack)
+    CEJCountB = snmp('public', 'CanonEJ.homant.ds', pageCountMIBBlack)
     CSHPCountB = snmp('public', '192.168.4.163', pageCountMIBBlack)
 
     counts = [
@@ -92,6 +92,6 @@ def index():
     return render_template('index.html',
             form=form,
             title='Hose Master',
-            subtitle='Canon Page Counts',
+            subtitle='Canon page counts',
             counts = counts
             )
