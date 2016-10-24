@@ -2,7 +2,7 @@
 
 import datetime
 from pysnmp.entity.rfc3413.oneliner import cmdgen
-from mailer import Mailer
+#from mailer import Mailer
 from prettytable import PrettyTable
 
 cmdGen = cmdgen.CommandGenerator()
