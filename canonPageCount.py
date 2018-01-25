@@ -41,7 +41,7 @@ CFOCountB = snmp('public', 'CanonFrontOffice', pageCountMIBBlack)
 CEJCountB = snmp('public', 'CanonEJ', pageCountMIBBlack)
 CSHPCountB = snmp('public', '192.168.4.163', pageCountMIBBlack)
 # SUBJECT, TODAY, PRINTER - COUNT, PRINTER - COUNT, PRINTER - COUNT
-# message = 'Subject: %s\n\n Lake Business,\n\nBelow are the pagecounts, as of today (%s).\n\n%s : %d\n%s : %d\n%s : %d\n%s : %d\n\n Thank you,\n\nConor Sullivan\nHose Master\n1233 East 222nd St.\nCleveland, OH 44117\n216-481-2020' % ('HoseMaster: Printer Page Counts', today, 'CanonReception (A4568)', CRCount, 'CanonFrontOffice (A2021)', CFOCount, 'CanonEJ (A3803)', CEJCount, 'CanonShipping (ASHP)', CSHPCount)
+
 counts = [
 	{
 		'name': 'CanonReception',
